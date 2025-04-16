@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Crypto Tool
+
+This repository contains a **React-based interactive application** that implements a collection of classical cryptographic algorithms using JavaScript. Designed for **educational purpose** and for my CIA in Cryptography Concepts, the tool allows users to experiment with encryption and decryption using a user-friendly web interface.
+
+🔗 **Live Demo:** [Crypto Cipher Tool Website](https://crypto-tool-project.vercel.app/)
+
+---
+
+## Substitution Ciphers
+
+Substitution ciphers replace elements of the plaintext with corresponding elements of ciphertext based on a rule or key.
+
+### Single Substitution  
+➡ Each letter is consistently replaced with another based on a fixed rule.
+
+-  **Caesar Cipher**: Shifts letters by a fixed amount.
+-  **Atbash Cipher**: Reverses the alphabet (A ↔ Z, B ↔ Y).
+-  **Affine Cipher**: Uses a function `E(x) = (ax + b) mod 26`.
+-  **August Cipher**: A Caesar-like variation with a word-based key.
+
+###  Multiple Substitution  
+➡ These ciphers use multiple alphabets or dynamic keys to enhance security.
+
+####  Polyalphabetical
+-  **Vigenère Cipher**: Uses a repeated key for shifting characters.
+-  **Gronsfeld Cipher**: Uses numeric keys (e.g., "31415") for character shifting.
+-  **Beaufort Cipher**: Similar to Vigenère but subtracts the key from plaintext.
+-  **Autoclave Cipher**: Extends the key using the plaintext itself.
+-  **Hill Cipher**: Uses matrix multiplication to encrypt blocks of text.
+
+---
+
+## Transposition Ciphers
+
+These rearrange the characters in the plaintext to form ciphertext.
+
+-  **Rail Fence Cipher**: Writes characters in a zigzag pattern across "rails".
+-  **Myszkowski Cipher**: Uses a keyword with repeating characters for column order.
+-  **Route Cipher**: Writes text in a grid and reads it in a special route (spiral, zigzag).
+
+---
+
+## Cryptanalysis Tool
+
+-  **N-Gram Analyzer**: Breaks input into N-letter chunks to help identify patterns for frequency analysis and attacks on substitution ciphers.
+
+---
+
+## Application Overview
+
+The UI is developed using **React.js** and styled for usability and clarity. Each cipher is modularized and implemented with JavaScript logic, enabling independent development, testing, and usage.
+
+### Features
+
+-  Clean and intuitive interface
+-  Real-time encryption/decryption
+-  Cipher descriptions and key instructions
+-  Sample input/output viewing
+-  All code is human-readable and well-commented
+
+---
+
+## Project Structure
+
+<details>
+<summary>📁 src</summary>
+src/ ├── App.js
+├── App.css
+├── ciphers/
+│ ├── Caesar.js
+│ ├── Atbash.js
+│ ├── Affine.js
+│ ├── Vigenere.js
+│ ├── Gronsfeld.js
+│ ├── Beaufort.js
+│ ├── August.js
+│ ├── Autoclave.js
+│ ├── Hill.js
+│ ├── Route.js
+│ ├── Myszkowski.js
+│ └── Ngram.js
+
+</details>
+
+<details>
+<summary>📁 output</summary>
+
+output/ └── caesar_encry.png
+└── caesar_decry.png
+└── atbash_encry.png
+.
+.
+
+</details>
+
+---
+
+## 🚀 Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 1. Clone the repository
+git clone https://github.com/MJ1331/Crypto_Tool.git
+cd Crypto_Tool
 
-In the project directory, you can run:
+### 2. Install dependencies
+npm install
 
-### `npm start`
+### 3. Start the development server
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Mohamed Junaidh R
+22011102056
+IoT A
