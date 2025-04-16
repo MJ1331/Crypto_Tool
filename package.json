@@ -20,7 +20,7 @@
     "eject": "react-scripts eject"
   },
   "engines": {
-  "node": "18"
+  "node": "16"
   },
   "eslintConfig": {
     "extends": [
